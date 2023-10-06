@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admission Form</title>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+<h1>Admission Form</h1>
+<form action="/submit" method="post">
+<label for="name">Full Name:</label><br>
+<input type="text" id="name" name="name" required><br><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" required><br><br>
+<label for="phone">Phone Number:</label><br>
+<input type="tel" id="phone" name="phone" required><br><br>
+<label for="dob">Date of Birth:</label><br>
+<input type="date" id="dob" name="dob" required><br><br>
+<label for="gender">Gender:</label><br>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br>
+<input type="radio" id="other" name="gender" value="other">
+<label for="other">Other</label><br><br>
+<label for="course">Select Course:</label><br>
+<select id="course" name="course">
+<option value="engineering">Engineering</option>
+<option value="business">Business</option>
+<option value="medicine">Medicine</option>
+<option value="arts">Arts</option>
+</select><br><br>
+<label for="resume">Upload Resume:</label><br>
+<input type="file" id="resume" name="resume"><br><br>
+<label for="comments">Additional Comments:</label><br>
+<textarea id="comments" name="comments" rows="4"
+cols="50"></textarea><br><br>
+<label for="subscribe">Subscribe to Newsletter:</label>
+<input type="checkbox" id="subscribe" name="subscribe"
+value="yes"><br><br>
+<button type="submit" name="submit" id="submitButton">Submit</button>
+</form>
+</body>
+</html>
+
+/* styles.css */
+
+/* Apply a reset to remove default margins and padding */
+body, h1, form, label, input, select, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Dark grey background for the page */
+    color: white; /* White text color for the page */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #87bf4a; /* Yellow-green color for the heading */
+}
+
+form {
+    background-color: #444; /* Dark grey background for the form */
+    color: white; /* White text color for the form */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #87bf4a; /* Yellow-green color for labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #555; /* Dark grey background for input fields */
+    color: white; /* White text color for input fields */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+select {
+    height: 35px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #87bf4a; /* Yellow-green background for the button */
+    color: white; /* White text color for the button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #6a9741; /* Slightly darker yellow-green on hover */
+}
